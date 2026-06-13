@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.custom-btn {
+  background-color: #0d6efd;
+  border: none;
+}
+
+.custom-btn:hover {
+  background-color: black;
+}
+
+/* support > CreateTicket > input styles */
+.no-focus:focus {
+  outline: transparent !important;
+  box-shadow: none !important;
+  border-color: rgba(216, 215, 215, 0.623);
+}
+
+/* support > hero.jsx > dropdown styles */
+.dropDown {
+  transition: transform 0.3s ease-in-out;
+  transform: scale();
+}
+
+.dropDown:hover {
+  transform: scale(1.02);
+}
+
+.close {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.9s ease,
+    opacity 2s ease;
+}
+
+.open {
+  max-height: 500px;
+  opacity: 1;
+  overflow: hidden;
+  transition:
+    max-height 0.9s ease,
+    opacity 0.1s ease;
+}
+
+.orangeLine::before {
+  content: " ";
+  background-color: #ff6f00;
+}

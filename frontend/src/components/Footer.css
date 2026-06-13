@@ -1,0 +1,12 @@
+.blue {
+  color: rgb(99, 97, 97);
+  
+}
+
+.blue:hover {
+  color: blue;
+}
+
+.fa-brands {
+  margin-right: 0.75rem;
+}

@@ -1,0 +1,7 @@
+.blackEffect {
+  color: rgb(99, 97, 97);
+}
+
+.blackEffect:hover {
+  color: rgb(29, 29, 31);
+}
