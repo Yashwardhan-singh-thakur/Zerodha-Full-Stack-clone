@@ -5,7 +5,8 @@
   "description": "Developed a full-stack Zerodha Clone using React, Node.js, Express.js, and MongoDB. Implemented features such as user authentication, stock watchlist management, holdings and positions tracking, portfolio analysis, and dynamic dashboard visualization. Integrated REST APIs with Axios and designed a responsive user interface using Bootstrap.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [
     "mern",
