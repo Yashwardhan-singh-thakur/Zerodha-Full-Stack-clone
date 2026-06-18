@@ -7,26 +7,26 @@ export const menuLinks = [
   {
     id: 1,
     title: "Orders",
-    path: "/orders",
+    path: "/order",
   },
   {
     id: 2,
     title: "Holdings",
-    path: "/holdings",
+    path: "/holding",
   },
   {
     id: 3,
     title: "Positions",
-    path: "/positions",
+    path: "/position",
   },
   {
     id: 4,
     title: "Funds",
-    path: "/funds",
+    path: "/fund",
   },
   {
     id: 5,
     title: "Apps",
-    path: "/apps",
+    path: "/app",
   },
 ];

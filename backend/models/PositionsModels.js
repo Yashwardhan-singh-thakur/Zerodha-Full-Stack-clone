@@ -1,9 +1,6 @@
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
 
-import connectDb from "../config/db.js";
-connectDb();
-
 const positionSchema = new Schema({
   product: String,
   name: String,

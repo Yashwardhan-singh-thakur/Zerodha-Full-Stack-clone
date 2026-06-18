@@ -5,7 +5,7 @@
   "description": "Developed a full-stack Zerodha Clone using React, Node.js, Express.js, and MongoDB. Implemented features such as user authentication, stock watchlist management, holdings and positions tracking, portfolio analysis, and dynamic dashboard visualization. Integrated REST APIs with Axios and designed a responsive user interface using Bootstrap.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon app.js"
   },
   "keywords": [
     "mern",
@@ -20,8 +20,12 @@
   "author": "Yashwardhan Singh Thakur",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "method-override": "^3.0.0",
     "mongoose": "^9.7.0"
   }

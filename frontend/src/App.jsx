@@ -7,7 +7,8 @@ import HomePage from "./landing_page/home/HomePage";
 import AboutPage from "./landing_page/about/AboutPage";
 import PricingPage from "./landing_page/pricing/PricingPage";
 import ProductsPage from "./landing_page/products/ProductsPage";
-import Signup from "./landing_page/signup/Signup";
+import Signup from "./landing_page/authentication/Signup";
+import Login from "./landing_page/authentication/Login";
 import SupportPage from "./landing_page/support/SupportPage";
 
 const routes = [
@@ -16,6 +17,7 @@ const routes = [
   { path: "/Pricing", element: <PricingPage /> },
   { path: "/Products", element: <ProductsPage /> },
   { path: "/Signup", element: <Signup /> },
+  { path: "/Login", element: <Login /> },
   { path: "/Support", element: <SupportPage /> },
 ];
 

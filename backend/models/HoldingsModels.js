@@ -1,9 +1,6 @@
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
 
-import connectDb from "../config/db.js";
-connectDb();
-
 const holdingSchema = new Schema({
   name: String,
   qty: Number,
