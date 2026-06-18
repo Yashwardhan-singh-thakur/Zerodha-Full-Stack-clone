@@ -6,7 +6,7 @@ import connectDb from "./config/db.js";
 import holdingsRouter from "./router/holdingsRouter.js";
 import positionsRouter from "./router/positionsRouter.js";
 import userRouter from "./router/usersRouter.js";
-// import ordersRouter from "./router/ordersRouter.js";
+import ordersRouter from "./router/ordersRouter.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,8 +21,7 @@ app.use(express.json());
 app.use("/", userRouter);
 app.use("/holding", holdingsRouter);
 app.use("/position", positionsRouter);
-
-// app.use("/order", ordersRouter);
+app.use("/order", ordersRouter);
 
 app.get("/home", (req, res) => {
   res.send("hi your website is working");
