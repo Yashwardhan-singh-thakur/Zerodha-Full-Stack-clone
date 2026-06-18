@@ -5,7 +5,8 @@ import jwt from "jsonwebtoken";
 export async function signUp(req, res) {
   let { username, email, password } = req.body;
 
-  let userExists = User.find({ email });
+  let userExists = await User.find({ email });
+
   if (userExists.length > 0) {
     return res.status(400).json({ message: "User already exists" });
   }
@@ -32,7 +33,7 @@ export async function signUp(req, res) {
 export async function logIn(req, res) {
   let { email, password } = req.body;
 
-  let user = User.find({ email });
+  let user = await User.findOne({ email });
   if (!user) {
     return res.status(400).json({ message: "user not found" });
   }
@@ -40,6 +41,7 @@ export async function logIn(req, res) {
   if (!isMatch) {
     return res.status(400).json({ message: "Invalid password" });
   }
+
   const token = jwt.sign(
     { userId: user._id, email: user.email, username: user.username },
     process.env.JWT_SECRET_KEY,

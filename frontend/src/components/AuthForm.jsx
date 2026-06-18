@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import { Snackbar, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import googleLogo from "../assets/google-logo.webp";
+// import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import Or from "../commonComponents/Or";
@@ -18,7 +18,8 @@ export default function AuthForm({ formType }) {
   const [password, setPassword] = useState("");
   const [isLoadding, setIsLoadding] = useState(false);
   const [serverError, setServerError] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -28,14 +29,14 @@ export default function AuthForm({ formType }) {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      navigate("/");
+      window.location.href = "http://localhost:5174/";
     }
   }, []);
 
   async function sendData(e) {
     try {
       setIsLoadding(true);
-      const baseURL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const baseURL = import.meta.env.VITE_API_URL || "http://localhost:3000";
       let url = formType === "login" ? "login" : "signup";
       let response = await axios.post(`${baseURL}/${url}`, {
         username,
@@ -51,7 +52,7 @@ export default function AuthForm({ formType }) {
       }
 
       setIsLoadding(false);
-      navigate("/");
+      window.location.href = "http://localhost:5174/";
     } catch (err) {
       setServerError(err.response.data.message);
       setIsLoadding(false);

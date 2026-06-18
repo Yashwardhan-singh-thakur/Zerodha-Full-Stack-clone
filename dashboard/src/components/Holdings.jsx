@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import VerticalBarChart from "./VerticalBarChart";
 
 export default function Holdings() {
   let [allHoldings, setAllHoldings] = useState([]);
@@ -8,7 +9,6 @@ export default function Holdings() {
     async function fetchHoldings() {
       try {
         let res = await axios.get("http://localhost:3000/holding");
-        console.log(res.data);
         setAllHoldings(res.data);
       } catch (err) {
         console.log(err);
@@ -19,8 +19,7 @@ export default function Holdings() {
 
   return (
     <>
-      <h3 className="title">Holdings {allHoldings.length}</h3>
-
+      <h3 className="title">Holdings {allHoldings.length} </h3>
       <div className="order-table">
         <table>
           <thead>
@@ -60,8 +59,7 @@ export default function Holdings() {
           })}
         </table>
       </div>
-
-      <div className="row">
+      <div className="row" style={{ marginBottom: "3rem" }}>
         <div className="col">
           <h5>
             29,875.<span>55</span>{" "}
@@ -79,6 +77,7 @@ export default function Holdings() {
           <p>P&L</p>
         </div>
       </div>
+      <VerticalBarChart holdings={allHoldings} />;
     </>
   );
 }

@@ -25,7 +25,7 @@ export default function Education() {
             covering everything from the basics to advanced trading.
           </p>
           <a href="#" className="fw-medium text-decoration-none">
-            Varsity <i class="fa-solid fa-arrow-right"></i>
+            Varsity <i className="fa-solid fa-arrow-right"></i>
           </a>
           <p className="fw-medium text-muted mt-5">
             TradingQ&A, the most active trading and investment community in

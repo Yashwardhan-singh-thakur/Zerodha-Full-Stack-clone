@@ -58,10 +58,10 @@ export default function Stats() {
             style={{ maxHeight: "37rem" }}
           />
           <Link to="#" className="fw-medium pe-4 text-decoration-none">
-            Explore our products <i class="fa-solid fa-arrow-right"></i>
+            Explore our products <i className="fa-solid fa-arrow-right"></i>
           </Link>
           <Link to="#" className="fw-medium text-decoration-none">
-            Try Kite demo <i class="fa-solid fa-arrow-right"></i>
+            Try Kite demo <i className="fa-solid fa-arrow-right"></i>
           </Link>
         </div>
       </div>

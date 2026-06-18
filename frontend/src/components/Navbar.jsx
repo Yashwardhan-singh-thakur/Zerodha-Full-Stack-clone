@@ -45,7 +45,7 @@ export default function Navbar() {
                   to={link.path}
                   onClick={() => handleActiveLink(link.id)}
                   onMouseEnter={() => setHoverLink(link.id)}
-                  onMouseLeave={() => setHoverLink(nul)}
+                  onMouseLeave={() => setHoverLink(null)}
                   style={{
                     color:
                       (activeLink === link.id || hoverLink === link.id) &&

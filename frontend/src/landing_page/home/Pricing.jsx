@@ -15,7 +15,7 @@ export default function Pricing() {
             in India. Flat fees and no hidden charges.
           </p>
           <Link to="#" className="fw-medium text-decoration-none">
-            See pricing <i class="fa-solid fa-arrow-right"></i>
+            See pricing <i className="fa-solid fa-arrow-right"></i>
           </Link>
         </div>
         <div className="col-12 col-lg-7 row mt-5-lg">
